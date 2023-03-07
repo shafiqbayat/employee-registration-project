@@ -6,9 +6,13 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.validation.constraints.*;
 import java.time.LocalDate;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @ToString
 public class Employee {
+
 
 //    @NotNull        --->    Field shouldn't be null
 //    @NotEmpty       --->    Field shouldn't be ""
@@ -18,7 +22,7 @@ public class Employee {
 //    @NotEmpty -> @NotNull + @NotEmpty
 //    @NotBlank -> @NotNull + @NotEmpty + @NotBlank
 
-    @NotBlank
+   @NotBlank
     @Size(max = 12, min = 2)
     private String firstName;
 
